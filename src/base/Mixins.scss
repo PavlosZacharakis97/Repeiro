@@ -1,0 +1,35 @@
+@use "../base/Variables.scss" as *;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin main-text {
+  @include flex-center;
+  flex-direction: column;
+  color: $color-white;
+  font-family: $font-main;
+  text-align: center;
+  width: 70%;
+}
+
+@mixin main-btn {
+    cursor: pointer;
+    padding: 18px;
+    background-color: rgba(240, 248, 255, 0);
+    border-radius: 6px;
+    border: none;
+    opacity: 0.8;
+    color: rgb(223, 240, 172);
+    font-size: medium;
+    &:hover {
+      background-color: $color-secondary;
+      color: $color-white;
+      -webkit-transform: scale(1.15);
+      transform: scale(1.15);
+      -webkit-transition: 0.5s ease-in;
+      transition: 0.2s ease-in;
+    }
+}

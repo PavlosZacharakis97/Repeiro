@@ -1,0 +1,36 @@
+@use "../../../base/Variables.scss" as *;
+@use "../../../base/Mixins.scss" as *;
+
+.Section2_img {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/image/Section2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  @include flex-center;
+  line-height: 2.5;
+}
+
+.Section2_text_block {
+  @include main-text;
+  width: 50%;
+}
+
+.text1 {
+  font-family: $font-main;
+  color: #219ebc;
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 18px;
+}
+h1 {
+  font-family: $font-main;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.Section2_btn {
+@include main-btn;
+}

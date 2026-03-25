@@ -1,0 +1,135 @@
+@use "../../../base/Variables.scss" as *;
+@use "../../../base/Mixins.scss" as *;
+
+.Section3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+
+  &_header {
+    text-align: center;
+    margin-bottom: 80px;
+    width: 100%;
+    max-width: 800px;
+
+    h1 {
+      font-size: 64px;
+      color: #002b49;
+      font-weight: 700;
+      margin: 0 0 20px 0;
+      line-height: 1.1;
+    }
+
+    p {
+      font-size: 24px;
+      color: #5d7486;
+      margin: 0;
+    }
+  }
+
+  &_content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 35px;
+      top: 50px;
+      bottom: 50px;
+      width: 0;
+      border-left: 2px dashed #e0e0e0;
+      z-index: 0;
+    }
+  }
+
+  &_item {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+
+    .Number_block {
+      width: 70px;
+      height: 70px;
+      flex-shrink: 0;
+      background: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff9d2b;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      z-index: 2;
+    }
+
+    .text_block {
+      flex: 1;
+      padding-top: 10px;
+
+      h3 {
+        font-size: 26px;
+        color: #002b49;
+        font-weight: 700;
+        margin: 0 0 15px 0;
+      }
+
+      p, li {
+        font-size: 18px;
+        color: #7a8a99;
+        line-height: 1.6;
+        margin-bottom: 12px;
+        max-width: 100%;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      li {
+        position: relative;
+        padding-left: 20px;
+        
+        &::before {
+          content: "•";
+          position: absolute;
+          left: 0;
+          color: #7a8a99;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .Section3_header h1 {
+    font-size: 40px;
+  }
+  .Section3_item {
+    gap: 20px;
+    .Number_block {
+      width: 50px;
+      height: 50px;
+      font-size: 18px;
+    }
+  }
+  .Section3_content::before {
+    left: 25px;
+  }
+}

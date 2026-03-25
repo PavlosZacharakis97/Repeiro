@@ -1,0 +1,8 @@
+@use "../../base/Variables.scss" as *;
+@use "../../base/Mixins.scss" as *;
+
+.Main_Sections {
+    @include flex-center;
+    flex-direction: column;
+}
+

@@ -1,0 +1,38 @@
+@use "../../base/Mixins.scss" as *;
+@use "../../base/Variables.scss" as *;
+
+.Hero_img {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/image/HeroMainIcon.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  @include flex-center;
+  line-height: 2.5;
+}
+
+.Hero_text_block {
+  @include main-text;
+  h1 {
+    font-size: 50px;
+    font-weight: 900;
+  }
+  span {
+    line-height: 130%;
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+.Hero_btn {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  &_left,
+  &_right {
+    @include main-btn;
+  }
+}
