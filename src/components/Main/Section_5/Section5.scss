@@ -1,0 +1,91 @@
+@use "../../../base/Variables.scss" as *;
+@use "../../../base/Mixins.scss" as *;
+
+
+h1 {
+    color: #023047;
+}
+
+.Section5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px;
+  text-align: center;
+
+  &_header {
+    padding: 50px;
+    margin-bottom: 50px;
+    .First_row { color: #219ebc; font-weight: 700; text-transform: uppercase; }
+    h1 { font-size: 48px; color: #002b49; margin: 15px 0; }
+    .h1_comment { color: #666; font-size: 18px; max-width: 600px; display: block; }
+  }
+
+  &_item_blocks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+  }
+}
+
+.Section5_blocks_item {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 350px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    .card_bg { transform: scale(1.1); }
+  }
+
+  .card_bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    filter: brightness(70%);
+  }
+
+  .card_content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    z-index: 2;
+
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.913) 0%, rgba(0,0,0,0) 100%);
+
+    h3 {
+      font-size: 20px;
+      font-family: $font-main;
+      margin: 0 0 5px 0;
+      font-weight: 700;
+      opacity: 0.8;
+    }
+
+    span {
+      font-size: 18px;
+      font-family: $font-main;
+      opacity: 0.9;
+      font-weight: 400;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .Section5_item_blocks { grid-template-columns: repeat(2, 1fr); }
+}
+
+
+@media (max-width: 600px) {
+  .Section5_item_blocks { grid-template-columns: 1fr; }
+}

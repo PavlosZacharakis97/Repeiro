@@ -39,6 +39,5 @@ export const Section3 = () => {
             </div>
         </div>
     </section>
-
     `
 }
