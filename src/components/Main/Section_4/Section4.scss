@@ -1,0 +1,84 @@
+@use "../../../base/Variables.scss" as *;
+@use "../../../base/Mixins.scss" as *;
+
+.Section4_h {
+  @include flex-center;
+  color: white;
+  max-width: 800px;
+  text-align: center;
+}
+
+.Section4_blocks {
+  @include flex-center;
+  flex-direction: column;
+  padding: 40px;
+  gap: 55px;
+}
+
+.Section4_block_UP,
+.Section4_block_DOWN {
+  @include flex-center;
+  align-items: baseline;
+  color: white;
+  gap: 25px;
+}
+
+
+
+
+.Section4 {
+  h3 {
+    color: #ff9d2b;
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  span {
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: 0.6;
+  }
+}
+
+.Section4_img {
+  position: relative;
+  width: 100%;
+  min-height: 800px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+
+  .Section4_bg_animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("/image/Section4_Main_BackGround.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: zoomBg 20s infinite alternate ease-in-out;
+  }
+
+  .Section4_content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+@include keyframes;

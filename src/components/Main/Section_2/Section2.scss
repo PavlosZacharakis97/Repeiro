@@ -1,21 +1,54 @@
 @use "../../../base/Variables.scss" as *;
 @use "../../../base/Mixins.scss" as *;
 
-.Section2_img {
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/image/Section2.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.Section2 {
+  position: relative;
+  width: 100%;
   height: 90vh;
-  @include flex-center;
-  line-height: 2.5;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  &_bg_animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("/image/Section2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: zoomBg 25s infinite alternate ease-in-out;
+  }
+  &_content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .Section2_text_block {
   @include main-text;
   width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  line-height: 1.6;
+}
+
+.Section2_desc {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
 }
 
 .text1 {
@@ -24,13 +57,20 @@
   font-weight: 700;
   letter-spacing: 3px;
   font-size: 18px;
+  text-transform: uppercase;
 }
+
 h1 {
   font-family: $font-main;
-  font-size: 48px;
+  font-size: 56px;
   font-weight: 800;
+  color: white;
+  margin: 0;
 }
 
 .Section2_btn {
-@include main-btn;
+  @include main-btn;
+  margin-top: 20px;
 }
+
+@include keyframes;
