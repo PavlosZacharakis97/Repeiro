@@ -12,12 +12,13 @@ h1 {
   align-items: center;
   padding: 80px 20px;
   text-align: center;
+  font-family: $font-main;
 
   &_header {
     padding: 50px;
     margin-bottom: 50px;
     .First_row { color: #219ebc; font-weight: 700; text-transform: uppercase; }
-    h1 { font-size: 48px; color: #002b49; margin: 15px 0; }
+    h1 { font-size: 48px; color: #002b49; margin: 15px 0; font-family: $font-main;}
     .h1_comment { color: #666; font-size: 18px; max-width: 600px; display: block; }
   }
 

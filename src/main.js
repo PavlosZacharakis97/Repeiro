@@ -1,4 +1,4 @@
-import { Header, Hero, Main } from "./components";
+import { Header, Hero, Main} from "./components";
 import "./style.css";
 
 document.querySelector("#app").innerHTML = `

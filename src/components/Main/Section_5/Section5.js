@@ -6,7 +6,7 @@ import block300 from "/image/Section5_300m.png"
 import block80 from "/image/Section5_80m.png"
 
 
-
+ 
 const Section5BlockItem = [
     {
         img: block20,

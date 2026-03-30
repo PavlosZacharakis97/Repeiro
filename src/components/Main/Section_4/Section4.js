@@ -1,4 +1,3 @@
-import section4Img from "/image/Section4_Main_BackGround.png";
 import checklist from "/image/checklist.png";
 import file from "/image/file.png";
 import paper from "/image/paper.png";
@@ -20,23 +19,6 @@ const section4BlockItemUP = [
     title: "Поиск и закупка материалов",
     text: "Закупку, поиск качественных материалов и доставку на объект мы берем на себя. Работа с оптовыми поставщиками, позволяет нам снижать Ваши расходы до 30%",
   },
-];
-
-const createBlockItemUp = () => {
-  return section4BlockItemUP.map(
-    (item) => `
-        <div class="Section1_blocks_item">
-            <div class="icon_wrapper">
-                <img src="${item.img}" alt="icon">
-                </div>
-                <h3>${item.title}</h3>
-                <span>${item.text}</span>
-            </div>
-    `
-  ).join("")
-};
-
-const section4BlockItemDown = [
   {
     img: sale,
     title: "Вы ничем не рискуете",
@@ -54,34 +36,33 @@ const section4BlockItemDown = [
   },
 ];
 
-
-const createBlockItemDown = () => {
-  return section4BlockItemDown.map(
-    (item) => `
-        <div class="Section1_blocks_item">
+const createBlockItemUp = () => {
+  return section4BlockItemUP
+    .map(
+      (item) => `
+        <div class="Section4_blocks_item">
             <div class="icon_wrapper">
                 <img src="${item.img}" alt="icon">
                 </div>
                 <h3>${item.title}</h3>
                 <span>${item.text}</span>
             </div>
-    `
-  ).join("")
+    `,
+    )
+    .join("");
 };
-
 
 export const Section4 = () => {
   return `
     <div class="Section4">
         <div class="Section4_img">
             <div class="Section4_bg_animation"></div> <div class="Section4_content"> <span style="color: #219ebc;font-size: 26px;">Ещё преимущества</span>
-                <h1 class="Section4_h">6 причин, чтобы выбрать нас подрядчиком</h1>
-                <div class="Section4_blocks">
+            <h1 class="Section4_h">6 причин, чтобы выбрать нас подрядчиком</h1>
+          <div class="Section4_blocks">
                     <div class="Section4_block_UP">${createBlockItemUp()}</div>
-                    <div class="Section4_block_DOWN">${createBlockItemDown()}</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    `;
-};
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    `;
+                  };
