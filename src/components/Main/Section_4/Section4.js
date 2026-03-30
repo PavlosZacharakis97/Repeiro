@@ -54,7 +54,7 @@ const createBlockItemUp = () => {
 
 export const Section4 = () => {
   return `
-    <div class="Section4">
+    <div class="Section4" id="section_4">
         <div class="Section4_img">
             <div class="Section4_bg_animation"></div> <div class="Section4_content"> <span style="color: #219ebc;font-size: 26px;">Ещё преимущества</span>
             <h1 class="Section4_h">6 причин, чтобы выбрать нас подрядчиком</h1>

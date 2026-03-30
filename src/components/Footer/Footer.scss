@@ -1,0 +1,87 @@
+@use "../../base/Mixins.scss" as *;
+@use "../../base/Variables.scss" as *;
+
+.Footer {
+    background-color: #0d2a37;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    &_links {
+        display: flex;
+        gap: 20px;
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+
+            img {
+                width: 20px;
+                height: 20px;
+                object-fit: contain;
+            }
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.2);
+                transform: translateY(-3px);
+            }
+        }
+    }
+
+    &_nav {
+        display: flex;
+        gap: 40px;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            opacity: 0.9;
+            transition: 0.3s;
+
+            &:hover {
+                opacity: 1;
+                color: #ff8a00;
+            }
+        }
+    }
+
+    &_copy {
+        color: #fff;
+        opacity: 0.5;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+    
+    @media (max-width: 600px) {
+        padding: 40px 15px;
+        gap: 30px;
+        
+        &_nav {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            
+            a {
+                font-size: 16px;
+            }
+        }
+        
+        &_links {
+            gap: 15px;
+            .social-icon {
+                width: 45px;
+                height: 45px;
+            }
+        }
+    }
+}

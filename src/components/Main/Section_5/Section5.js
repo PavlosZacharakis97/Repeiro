@@ -58,7 +58,7 @@ const createBlockItem = () => {
 
 export const Section5 = () => {
     return `
-    <div class="Section5">
+    <div class="Section5" id="section_5">
         <div class="Section5_header">
             <span class="First_row">Портфолио</span>
             <h1>Некоторые проекты</h1>
