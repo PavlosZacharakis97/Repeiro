@@ -58,11 +58,11 @@ export const Section4 = () => {
         <div class="Section4_img">
             <div class="Section4_bg_animation"></div> <div class="Section4_content"> <span style="color: #219ebc;font-size: 26px;">Ещё преимущества</span>
             <h1 class="Section4_h">6 причин, чтобы выбрать нас подрядчиком</h1>
-          <div class="Section4_blocks">
-                    <div class="Section4_block_UP">${createBlockItemUp()}</div>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
+            <div class="Section4_blocks">
+                  <div class="Section4_block_UP">${createBlockItemUp()}</div>
+                  </div>
+                </div>
+            </div>
+          </div>
                     `;
                   };

@@ -1,10 +1,11 @@
 import { Section1 } from "./Section_1";
 import "./Main.scss"
 import { Section2 } from "./Section_2";
-import { Section3 } from "./Section_3/";
-import { Section4 } from "./Section_4/";
-import { Section5 } from "./Section_5/";
-import { Section6 } from "./Section_6/";
+import { Section3 } from "./Section_3";
+import { Section4 } from "./Section_4";
+import { Section5 } from "./Section_5";
+import { Section6 } from "./Section_6";
+import { Section7 } from "./Section_7";
 
 export const Main = () => {
     return `
@@ -15,6 +16,7 @@ export const Main = () => {
             ${Section4()}
             ${Section5()}
             ${Section6()}
+            ${Section7()}
         </main>
     `;
 };
