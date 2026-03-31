@@ -6,7 +6,7 @@ export const Hero = () => {
           <span>Реконструкция, отделка, капитальный ремонт офисных помещений в Москве и области. Гарантия до 5-ти лет</span>
           <div class="Hero_btn">
             <button class="Hero_btn_left">Оставить заявку</button>
-            <button class="Hero_btn_right">Узнать подробности</button>
+            <a href="/about" class="Hero_btn_right">Узнать подробности</a>
           </div>
           <span class="Hero_gift">Авторский надзор в подарок</span>
         </div>

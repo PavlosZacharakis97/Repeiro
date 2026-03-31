@@ -1,9 +1,13 @@
-import { Header, Hero, Main, Footer} from "./components";
+import { Header, Main, Footer} from "./components";
+import { initRouter } from "./router";
 import "./style.css";
 
-document.querySelector("#app").innerHTML = `
+const renderApp = (Page) => {
+    document.querySelector("#app").innerHTML = `
     ${Header()}
-    ${Hero()}
-    ${Main()}
+    ${Main(Page)}
     ${Footer()}
 `;
+}
+
+initRouter(renderApp)
