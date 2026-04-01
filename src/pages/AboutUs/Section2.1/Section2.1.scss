@@ -1,0 +1,87 @@
+@use "../../../base/Mixins.scss" as *;
+@use "../../../base/Variables.scss" as *;
+
+.AboutSection2 {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fff;
+
+  &_pretitle {
+    display: block;
+    color: #ff8a00;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: $font-main;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+  }
+
+  &_h2 {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: $font-main;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  &_desc {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    color: #777;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: $font-main;
+  }
+
+  &_grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &_item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+
+    .icon_wrapper {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 25px;
+      box-shadow: 0 10px 20px rgba(255, 138, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    &:hover .icon_wrapper {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .aboutSection2_h3 {
+      font-size: 20px;
+      font-weight: 700;
+      font-family: $font-main;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .aboutSection2_p {
+      font-size: 15px;
+      font-family: $font-main;
+      color: #666;
+      line-height: 1.6;
+    }
+  }
+}
