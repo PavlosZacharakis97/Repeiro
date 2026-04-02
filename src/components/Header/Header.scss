@@ -1,15 +1,51 @@
 @use "../../base/Variables.scss" as *;
 @use "../../base/Mixins.scss" as *;
 
-.Header{
+$orange-accent: #ff8a00; 
+
+.Header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 80px;
-}
+    background: #fff;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 
-.logo_link{
-    cursor: pointer;
+    @media (max-width: 1080px) { 
+        padding: 15px 30px; 
+    }
+
+    &_logo img { 
+        height: 50px; 
+        cursor: pointer;
+    }
+
+    &_nav {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        @media (max-width: 1030px) {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            background: #ffffff;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            transition: right 0.4s ease-in-out;
+            z-index: 999;
+
+            &.nav--open { right: 0 !important; }
+        }
+    }
 }
 
 .nav_links {
@@ -17,61 +53,118 @@
     align-items: center;
     gap: 24px;
 
-    a{
+    @media (max-width: 1030px) {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    a {
         padding: 5px 10px;
         color: $color-primary;
         font-family: $font-main;
         font-size: $font-size-base;
         cursor: pointer;
-        &:hover{
-            @include flex-center;
-            -webkit-transform: scale(1.15);
+        text-decoration: none;
+        transition: 0.2s ease-in;
+
+        @media (max-width: 1030px) {
+            font-size: 24px;
+        }
+
+        &:hover {
+            @include flex-center; 
             transform: scale(1.15);
-            -webkit-transition: 0.5s ease-in;
-            transition: 0.2s ease-in;
             background-color: $color-primary;
             color: white;
             border-radius: 8px;
-
-            text-wrap: none;
+            white-space: nowrap;
         }
     }
 }
 
+.Header_right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
 
+    @media (max-width: 1030px) {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
 
-.Header_support{
+.Header_support {
     display: flex;
     align-items: flex-end;
     flex-direction: column;
-    &_name{
+
+    @media (max-width: 1030px) {
+        align-items: center;
+    }
+
+    &_name {
         color: $color-primary;
         font-family: $font-main;
     }
-    &_number{
+
+    &_number {
+        font-weight: 500;
+        font-family: $font-main;
         font-size: 20px;
+        color: $color-primary;
+        text-decoration: none;
+
+        &:hover { color: $orange-accent; }
     }
 }
 
-.Header_support_number{
-    font-weight: 500;
-    font-family: $font-main;
-    font-size: $font-size-base;
+.lang_switcher {
+    display: flex;
+    gap: 10px;
+
+    .lang_btn {
+        padding: 6px 14px;
+        border-radius: 6px;
+        font-weight: 700;
+        cursor: pointer;
+        background: #fff;
+        color: $color-primary;
+        border: 2px solid $orange-accent;
+        font-family: $font-main;
+        transition: all 0.3s ease;
+
+        &.active {
+            background: $orange-accent;
+            color: #fff;
+        }
+    }
 }
 
-.lang_btn {
-    background: transparent;
-    border: 1px solid $color-primary;
-    color: $color-primary;
-    padding: 5px 10px;
-    border-radius: 4px;
+.burger_menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 22px;
     cursor: pointer;
-    font-family: $font-main;
-    font-weight: bold;
-    transition: 0.3s;
+    z-index: 1001;
 
-    &:hover {
+    @media (max-width: 1030px) { display: flex; }
+
+    span {
+        display: block;
+        width: 100%;
+        height: 3px;
         background-color: $color-primary;
-        color: white;
+        transition: all 0.3s ease;
+        border-radius: 2px;
+    }
+
+    &.burger--active {
+        span:nth-child(1) { transform: translateY(9.5px) rotate(45deg); background-color: $orange-accent; }
+        span:nth-child(2) { opacity: 0; }
+        span:nth-child(3) { transform: translateY(-9.5px) rotate(-45deg); background-color: $orange-accent; }
     }
 }
+
+.no-scroll { overflow: hidden; }
