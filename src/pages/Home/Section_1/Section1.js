@@ -1,3 +1,4 @@
+import { t } from "../../../translation/translation"
 import  percentage from "/image/percentage.png"
 
 
@@ -5,18 +6,18 @@ import  percentage from "/image/percentage.png"
 const blockItem = [
     {
         img: percentage,
-        title: "Точная стоимость работ",
-        text: "Выезд инженера-сметчика для расчета точной стоимости в течении 3-х часов",
+        title: "section1.block.title1",
+        text: "section1.block.text1",
     },
     {
         img: percentage,
-        title: "Четкие сроки на выполнение",
-        text: "Работы проводятся в четко установленные сроки по договору и в строгом соответствии с нормами СНиП и СП",
+        title: "section1.block.title2",
+        text: "section1.block.text2",
     },
     {
         img: percentage,
-        title: "Гарантия на работы до 5-ти лет",
-        text: "Чтобы поговорить со специалистом, пожалуйста, позвоните",
+        title: "section1.block.title3",
+        text: "section1.block.text3",
     },
 
 ]
@@ -27,8 +28,8 @@ const createBlockItem = () => {
                 <div class="icon_wrapper">
                     <img src="${item.img}" alt="icon">
                 </div>
-                <h3>${item.title}</h3>
-                <span>${item.text}</span>
+                <h3>${t(item.title)}</h3>
+                <span>${t(item.text)}</span>
             </div>
     `).join("")
 }
@@ -39,9 +40,9 @@ export const Section1 = () => {
     return`
         <div class="Section1">
         <div class="Section1_header">
-            <span class="Section1_subtitle">Преимущества</span>
-            <h1>Работайте с нами</h1>
-            <p class="Section1_description">Капитальный ремонт офисов – путь к успеху и престижу по-новому</p>
+            <span class="Section1_subtitle">${t("section1.subtitle")}</span>
+            <h1>${t("section1.h1")}</h1>
+            <p class="Section1_description">${t("section1.description")}</p>
         </div>
         <div class="Section1_blocks">
         ${createBlockItem()}

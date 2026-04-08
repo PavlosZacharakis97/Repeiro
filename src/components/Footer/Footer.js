@@ -1,7 +1,9 @@
+import { t } from "../../translation/translation"
 import facebook from "/image/facebook.png"
 import instagram from "/image/instagram.png"
 import twitter from "/image/twitter.png"
 import vk from "/image/vk.png"
+
 
 export const Footer = () => {
     return /*html*/ `
@@ -22,10 +24,10 @@ export const Footer = () => {
         </div>
         
         <nav class="Footer_nav">
-            <a href="#section_4">О компании</a>
-            <a href="#section_5">Новости</a>
-            <a href="">Помощь</a>
-            <a href="">Контакты</a>
+            <a href="#section_4">${t("footer.a1")}</a>
+            <a href="#section_5">${t("footer.a2")}</a>
+            <a href="">${t("footer.a3")}</a>
+            <a href="">${t("footer.a4")}</a>
         </nav>
         
         <span class="Footer_copy">© 2020 Название компании</span>

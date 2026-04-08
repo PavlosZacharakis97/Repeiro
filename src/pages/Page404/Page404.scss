@@ -1,0 +1,79 @@
+@use "../../base/Variables.scss" as *;
+
+.Page404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+
+    &_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1200px;
+        width: 100%;
+        gap: 50px;
+
+        @media (max-width: 950px) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    .img404 {
+        max-height: 75vh;
+        width: auto;
+        object-fit: contain;
+        animation: dragonFloat 4s ease-in-out infinite;
+
+        @media (max-width: 768px) {
+            max-height: 50vh;
+        }
+    }
+
+    &_content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &_text {
+        color: #3498db;
+        font-family: $font-main;
+        font-size: 48px;
+        font-weight: 800;
+        line-height: 1.2;
+        text-transform: none;
+
+        @media (max-width: 768px) {
+            font-size: 32px;
+        }
+    }
+
+    &_back {
+        display: inline-block;
+        width: max-content;
+        padding: 12px 30px;
+        background: #fff;
+        color: #3498db;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 700;
+        transition: 0.3s;
+
+        @media (max-width: 950px) { margin: 0 auto; }
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    }
+}
+
+@keyframes dragonFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}

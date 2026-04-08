@@ -1,41 +1,43 @@
+import { t } from "../../../translation/translation";
+
 const Section4items = [
     {
         type: "base",
-        h3: "Эскизный",
-        title: "Базовое планирование и концепция",
-        price: "от 1 500 ₽",
+        h3: t("section4.1.h3.1"),
+        title: t("section4.1.title.1"),
+        price: t("section4.1.price.1"),
         features: [
-            { text: "Обмерный план", included: true },
-            { text: "Планировочное решение (2 варианта)", included: true },
-            { text: "Концепция (коллажи)", included: true },
-            { text: "3D визуализация", included: false },
-            { text: "Рабочие чертежи", included: false }
+            { text: t("section4.1.text.1.1"), included: true },
+            { text: t("section4.1.text.1.2"), included: true },
+            { text: t("section4.1.text.1.3"), included: true },
+            { text: t("section4.1.text.1.4"), included: false },
+            { text: t("section4.1.text.1.5"), included: false }
         ]
     },
     {
         type: "popular",
-        h3: "Полный",
-        title: "Стандартный проект для ремонта",
-        price: "от 3 000 ₽",
+        h3: t("section4.1.h3.2"),
+        title: t("section4.1.title.2"),
+        price: t("section4.1.price.2"),
         features: [
-            { text: "Обмерный план", included: true },
-            { text: "Планировочное решение (3 варианта)", included: true },
-            { text: "Фотореалистичная 3D визуализация", included: true },
-            { text: "Полный пакет рабочих чертежей", included: true },
-            { text: "Ведомость материалов и мебели", included: true }
+            { text: t("section4.1.text.2.1"), included: true },
+            { text: t("section4.1.text.2.2"), included: true },
+            { text: t("section4.1.text.2.3"), included: true },
+            { text: t("section4.1.text.2.4"), included: true },
+            { text: t("section4.1.text.2.5"), included: true }
         ]
     },
     {
         type: "premium",
-        h3: "Премиум",
-        title: "Под ключ с авторским надзором",
-        price: "от 5 500 ₽",
+        h3: t("section4.1.h3.3"),
+        title: t("section4.1.title.3"),
+        price: t("section4.1.price.3"),
         features: [
-            { text: "Все опции тарифа «Полный»", included: true },
-            { text: "Комплектация объекта (закупки)", included: true },
-            { text: "Авторский надзор до конца стройки", included: true },
-            { text: "Декорирование интерьера", included: true },
-            { text: "Приоритетная линия поддержки", included: true }
+            { text: t("section4.1.text.3.1"), included: true },
+            { text: t("section4.1.text.3.2"), included: true },
+            { text: t("section4.1.text.3.3"), included: true },
+            { text: t("section4.1.text.3.4"), included: true },
+            { text: t("section4.1.text.3.5"), included: true }
         ]
     }
 ];
@@ -43,10 +45,10 @@ const Section4items = [
 const createPricingCards = () => {
     return Section4items.map(item => `
         <div class="PriceCard ${item.type === 'popular' ? 'PriceCard--active' : ''}">
-            ${item.type === 'popular' ? '<div class="PriceCard_badge">Популярный</div>' : ''}
+            ${item.type === 'popular' ? `<div class="PriceCard_badge">${t("section4.1.popular")}</div>` : ''}
             <h3 class="PriceCard_h3">${item.h3}</h3>
             <p class="PriceCard_title">${item.title}</p>
-            <div class="PriceCard_price">${item.price} <span>/ м²</span></div>
+            <div class="PriceCard_price">${item.price} <span>/ m²</span></div>
             
             <ul class="PriceCard_list">
                 ${item.features.map(f => `
@@ -56,7 +58,7 @@ const createPricingCards = () => {
                 `).join("")}
             </ul>
             
-            <button class="PriceCard_btn">Выбрать тариф</button>
+            <button class="PriceCard_btn">${t("section4.1.button") || "Choose plan"}</button>
         </div>
     `).join("");
 };
@@ -65,9 +67,9 @@ export const AboutSection4 = () => {
     return /* html */ `
     <section class="AboutSection4">
         <div class="AboutSection4_container">
-            <span class="AboutSection4_subtitle">СТОИМОСТЬ УСЛУГ</span>
-            <h2 class="AboutSection4_h2">Цены на дизайн-проекты</h2>
-            <p class="AboutSection4_desc">Выберите подходящий пакет услуг в зависимости от ваших задач и бюджета.</p>
+            <span class="AboutSection4_subtitle">${t("section4.1.title")}</span>
+            <h2 class="AboutSection4_h2">${t("section4.1.h2")}</h2>
+            <p class="AboutSection4_desc">${t("section4.1.p")}</p>
             
             <div class="AboutSection4_grid">
                 ${createPricingCards()}

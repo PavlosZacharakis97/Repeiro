@@ -1,28 +1,32 @@
+import { t } from "../../../translation/translation"
+
+
+
 export const Section3 = () => {
     return`
         <section class="Section3">
         <div class="Section3_header">
-            <h1>Этапы работ</h1>
-            <p>Какие работы включает в себя качественный капитальный ремонт офисов?</p>
+            <h1>${t("section3.h1")}</h1>
+            <p>${t("section3.p1")}</p>
         </div>
 
         <div class="Section3_content">
             <div class="Section3_item">
                 <div class="Number_block">1</div>
                 <div class="text_block">
-                    <h3>Подготовительные</h3>
-                    <p>Получение технического заключения о допустимости и безопасности ранее выполненных работ. Оценка состояния (степени износа, масштаба повреждений) коммуникаций и конструкций, определение порядка и стоимости их восстановления.</p>
+                    <h3>${t("section3.h3")}</h3>
+                    <p>${t("section3.p2")}</p>
                 </div>
             </div>
 
             <div class="Section3_item">
                 <div class="Number_block">2</div>
                 <div class="text_block">
-                    <h3>Шумные и черновые работы</h3>
+                    <h3>${t("section3.item.h3")}</h3>
                     <ul>
-                        <li>Демонтаж перегородок, старой отделки до несущих конструкций.</li>
-                        <li>Возведение перегородок по проекту: из газобетона, кирпича...</li>
-                        <li>Разводка и испытания коммуникаций.</li>
+                        <li>${t("section3.item.li1")}</li>
+                        <li>${t("section3.item.li2")}</li>
+                        <li>${t("section3.item.li3")}</li>
                     </ul>
                 </div>
             </div>
@@ -30,10 +34,10 @@ export const Section3 = () => {
             <div class="Section3_item">
                 <div class="Number_block">3</div>
                 <div class="text_block">
-                    <h3>Получистовые (подготовка под чистовую отделку)</h3>
+                    <h3>${t("section3.item2.h3")}</h3>
                     <ul>
-                        <li>Устранение мелких неровностей, недочетов черновой подготовки.</li>
-                        <li>Шпатлевка потолка.</li>
+                        <li>${t("section3.item2.li1")}</li>
+                        <li>${t("section3.item2.li2")}</li>
                     </ul>
                 </div>
             </div>

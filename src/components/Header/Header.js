@@ -1,35 +1,23 @@
+import { getLanguage } from "../../i18n";
+import { t } from "../../translation/translation";
 import gopuram from "/image/gopuram.png";
 
-const translations = {
-  ru: {
-    links: [
-      { name: "О компании", link: "#section_4" },
-      { name: "Новости", link: "#section_5" },
-      { name: "Помощь", link: "#" },
-      { name: "Отзывы", link: "#" },
-      { name: "Контакты", link: "#footer" },
-    ],
-    supportName: "Служба продаж:",
-  },
-  en: {
-    links: [
-      { name: "About Us", link: "#section_4" },
-      { name: "News", link: "#section_5" },
-      { name: "Help", link: "#" },
-      { name: "Reviews", link: "#" },
-      { name: "Contacts", link: "#footer" },
-    ],
-    supportName: "Sales Department",
-  },
-};
 
-let currentLang = localStorage.getItem("lang") || "ru";
+
+const links = [
+      { name: "nav.about", link: "#section_4" },
+      { name: "nav.news", link: "#section_5" },
+      { name: "nav.help", link: "#" },
+      { name: "nav.reviews", link: "#" },
+      { name: "nav.contacts", link: "#footer" },
+]
 
 export const Header = () => {
-  const t = translations[currentLang];
+
+const currentLang = getLanguage()
 
   return /*html*/ `
-    <header class="Header">
+    <header class="Header" id="header">
       <a class="Header_logo" href="/"><img src="${gopuram}" alt="logo"></a>
       
       <div class="burger_menu" id="burger-trigger">
@@ -38,12 +26,12 @@ export const Header = () => {
 
       <nav class="Header_nav" id="header-nav">
         <div class="nav_links">
-            ${t.links.map(item => `<a href="${item.link}">${item.name}</a>`).join("")}
+            ${links.map(item => `<a href="${item.link}">${t(item.name)}</a>`).join("")}
         </div>
         
         <div class="Header_right">
             <div class="Header_support">
-                <span class="Header_support_name">${t.supportName}</span>
+                <span class="Header_support_name">${t("nav.supportName")}</span>
                 <a href="tel:+74951234567" class="Header_support_number">+7 495 123-45-67</a>
             </div>
 

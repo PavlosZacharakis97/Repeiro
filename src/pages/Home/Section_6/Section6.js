@@ -1,4 +1,7 @@
+import { t } from "../../../translation/translation";
 import Section6Img from "/image/Section6.png";
+
+
 
 export const Section6 = () => {
     return /* html */`
@@ -8,9 +11,9 @@ export const Section6 = () => {
         <div class="Section6__overlay"></div>
 
         <div class="Section6__content">
-            <h1 class="Section6__title">Наши клиенты</h1>
+            <h1 class="Section6__title">${t("section6.title")}</h1>
             <p class="Section6__subtitle">
-                Спасибо всем, кто доверяет ремонт самого ценного — второго дома, своего офиса, нашей компании
+                ${t("section6.subtitle")}
             </p>
 
             <div class="Section6__logos-grid">

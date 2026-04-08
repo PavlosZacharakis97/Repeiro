@@ -4,39 +4,40 @@ import block45 from "/image/Section5_45m.png"
 import block130 from "/image/Section5_130m.png"
 import block300 from "/image/Section5_300m.png"
 import block80 from "/image/Section5_80m.png"
+import { t } from "../../../translation/translation"
 
 
  
 const Section5BlockItem = [
     {
         img: block20,
-        title: "Офисное помещение",
-        text: "20 м2"
+        title: "section5.title1",
+        text: "section5.text1"
     },
     {
         img: block100,
-        title: "Офисное помещение",
-        text: "100 м2"
+        title: "section5.title2",
+        text: "section5.text2"
     },
     {
         img: block45,
-        title: "Офисное помещение",
-        text: "45 м2"
+        title: "section5.title3",
+        text: "section5.text3"
     },
     {
         img: block130,
-        title: "Кафе",
-        text: "130 м2"
+        title: "section5.title4",
+        text: "section5.text4"
     },
     {
         img: block300,
-        title: "Магазин одежды",
-        text: "300 м2"
+        title: "section5.title5",
+        text: "section5.text5"
     },
     {
         img: block80,
-        title: "Магазин одежды",
-        text: "80 м2"
+        title: "section5.title6",
+        text: "section5.text6"
     },
 ]
 
@@ -48,8 +49,8 @@ const createBlockItem = () => {
         <div class="Section5_blocks_item">
             <img src="${item.img}" alt="${item.title}" class="card_bg">
             <div class="card_content">
-                <h3>${item.title}</h3>
-                <span>${item.text}</span>
+                <h3>${t(item.title)}</h3>
+                <span>${t(item.text)}</span>
             </div>
         </div>
     `
@@ -60,9 +61,9 @@ export const Section5 = () => {
     return `
     <div class="Section5" id="section_5">
         <div class="Section5_header">
-            <span class="First_row">Портфолио</span>
-            <h1>Некоторые проекты</h1>
-            <span class="h1_comment">Если хотите, чтобы мы разместили Ваш ремонт в портфолио - напишите нам об этом</span>
+            <span class="First_row">${t("section5.span1")}</span>
+            <h1>${t("section5.h1")}</h1>
+            <span class="h1_comment">${t("section5.span2")}</span>
         </div>
         <div class="Section5_item_blocks">${createBlockItem()}</div>
     </div>

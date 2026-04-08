@@ -1,38 +1,40 @@
+import { t } from "../../../translation/translation";
 import checklist from "/image/checklist.png";
 import file from "/image/file.png";
 import paper from "/image/paper.png";
 import sale from "/image/sale.png";
 
+
 const section4BlockItemUP = [
   {
     img: checklist,
-    title: "Оперативность",
-    text: "Вы наверняка сталкивались с ситуацией, когда вам нужно вызвать специалиста и Вам говорят что приедем завтра, пробки и прочие. причины. У нас такого не бывает! Специалист приедет уже через час! Мы ценим Ваше время!",
+    title: "section4.title1",
+    text: "section4.text1",
   },
   {
     img: file,
-    title: "Работаем честно",
-    text: "Рационально используем материал, предоставляем фото и видео отчеты проводимых работ на объекте. Полная отчетность о использовании материалов. У нас все прозрачно и честно!",
+    title: "section4.title2",
+    text: "section4.text2",
   },
   {
     img: paper,
-    title: "Поиск и закупка материалов",
-    text: "Закупку, поиск качественных материалов и доставку на объект мы берем на себя. Работа с оптовыми поставщиками, позволяет нам снижать Ваши расходы до 30%",
+    title: "section4.title3",
+    text: "section4.text3",
   },
   {
     img: sale,
-    title: "Вы ничем не рискуете",
-    text: "Работаем в строгом соответствии с подписанным обеими сторонами договором. Соблюдаем график производства работ и сроки выполнения. Не уложимся в срок - выплатим компенсацию",
+    title: "section4.title4",
+    text: "section4.text4",
   },
   {
     img: sale,
-    title: "Вы ни о чем не беспокоитесь",
-    text: "Вам не нужно думать куда деть строительный мусор или кого найти для погрузки, разгрузки. Мы все сделаем сами. Полное обеспечение и ведение объекта берем на себя",
+    title: "section4.title5",
+    text: "section4.text5",
   },
   {
     img: sale,
-    title: "Никаких 'хитрых фишек'",
-    text: "Рассчитаем подробную и точную смету работ. Прописываем каждую операцию, поэтому нет никаких работ типа 'а это мы не учли в основной смете'. Можем обсуждать только скидки, а не повышение цены.",
+    title: "section4.title6",
+    text: "section4.text6",
   },
 ];
 
@@ -44,8 +46,8 @@ const createBlockItemUp = () => {
             <div class="icon_wrapper">
                 <img src="${item.img}" alt="icon">
                 </div>
-                <h3>${item.title}</h3>
-                <span>${item.text}</span>
+                <h3>${t(item.title)}</h3>
+                <span>${t(item.text)}</span>
             </div>
     `,
     )
@@ -56,8 +58,8 @@ export const Section4 = () => {
   return `
     <div class="Section4" id="section_4">
         <div class="Section4_img">
-            <div class="Section4_bg_animation"></div> <div class="Section4_content"> <span style="color: #219ebc;font-size: 26px;">Ещё преимущества</span>
-            <h1 class="Section4_h">6 причин, чтобы выбрать нас подрядчиком</h1>
+            <div class="Section4_bg_animation"></div> <div class="Section4_content"> <span style="color: #219ebc;font-size: 26px;">${t("section4.span")}</span>
+            <h1 class="Section4_h">${t("section4.h1")}</h1>
             <div class="Section4_blocks">
                   <div class="Section4_block_UP">${createBlockItemUp()}</div>
                   </div>
