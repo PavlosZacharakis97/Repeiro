@@ -1,5 +1,9 @@
 import { t } from "../../../translation/translation";
 import Section6Img from "/image/Section6.png";
+import logo1 from "/image/Logo1.png";
+import logo2 from "/image/Logo2.png";
+import logo3 from "/image/Logo3.png";
+import logo4 from "/image/Logo4.png";
 
 
 
@@ -18,16 +22,16 @@ export const Section6 = () => {
 
             <div class="Section6__logos-grid">
                 <div class="Section6__logo-card">
-                    <img src="/image/Logo1.png" alt="Greens Food Suppliers">
+                    <img src="${logo1}" alt="Greens Food Suppliers">
                 </div>
                 <div class="Section6__logo-card">
-                    <img src="/image/Logo2.png" alt="BeautyBox">
+                    <img src="${logo2}" alt="BeautyBox">
                 </div>
                 <div class="Section6__logo-card">
-                    <img src="/image/Logo3.png" alt="The Dance Studio">
+                    <img src="${logo3}" alt="The Dance Studio">
                 </div>
                 <div class="Section6__logo-card">
-                    <img src="/image/Logo4.png" alt="Yoga Baby">
+                    <img src="${logo4}" alt="Yoga Baby">
                 </div>
             </div>
         </div>
