@@ -56,7 +56,7 @@ export const AboutSection5 = () => {
 
             <form class="AboutSection5_formCard" id="contact-form">
                 <input name="user_name" type="text" placeholder="${t("section5.1.placeholder.name")}" class="AboutSection5_input" required>
-                <input name="user_phone" type="tel" placeholder="${t("section5.1.placeholder.tel")}" class="AboutSection5_input" required>
+                <input name="phone" type="tel" placeholder="${t("section5.1.placeholder.tel")}" class="AboutSection5_input" required>
                 <input name="user_email" type="email" placeholder="${t("section5.1.placeholder.email")}" class="AboutSection5_input" required>
                 <textarea name="message" placeholder="Описание объекта (площадь, назначение)" class="AboutSection5_textarea"></textarea>
                 <button type="submit" class="AboutSection5_btn">${t("section5.1.placeholder.btn")}</button>
